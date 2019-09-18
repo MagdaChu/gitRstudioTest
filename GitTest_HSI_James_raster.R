@@ -11,9 +11,6 @@ library(sp)
 da <- read.csv("Pv xyz predicted distributions_dist_included.csv")
 da2 <- read.csv("Pv xyz predicted distributions no distance.csv")
 land <- raster("C:/Users/mec21/Documents/SMRU/IBM/Model/Input/land.asc") # for East Coast
-land <- raster("C:/Users/mec21/Documents/SMRU/IBM/Model/Input/land_Wash.asc") # for Wash
-land <- raster("C:/Users/mec21/Documents/SMRU/IBM/Model/Input/land_MorayFirth_smaller.asc") # for MF
-land <- raster("C:/Users/mec21/Documents/SMRU/IBM/Model/Input/land_PentlandFirth.asc") 
 
 head(da)
 head(da2)
@@ -202,22 +199,3 @@ plot(NodistForModel2_no0)
 writeRaster(distAllModel2_no0,"HSI_James_dist_AllPoints_no0.asc",format="ascii",overwrite=TRUE)
 writeRaster(distAllModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_dist_AllPoints_no0.asc",format="ascii",overwrite=TRUE)
 
-#Wash
-writeRaster(distAllModel2_no0,"HSI_James_dist_AllPoints_no0_Wash.asc",format="ascii",overwrite=TRUE)
-writeRaster(distAllModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_dist_AllPoints_no0_Wash.asc",format="ascii",overwrite=TRUE)
-
-writeRaster(NodistAllModel2_no0,"HSI_James_NoDist_AllPoints_no0_Wash.asc",format="ascii",overwrite=TRUE)
-writeRaster(NodistAllModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_NoDist_AllPoints_no0_Wash.asc",format="ascii",overwrite=TRUE)
-
-writeRaster(NodistForModel2_no0,"HSI_James_NoDist_ForOnly_no0_Wash.asc",format="ascii",overwrite=TRUE)
-writeRaster(NodistForModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_NoDist_ForOnly_no0_Wash.asc",format="ascii",overwrite=TRUE)
-
-#Pentland Firth
-writeRaster(distAllModel2_no0,"HSI_James_dist_AllPoints_no0_PF.asc",format="ascii",overwrite=TRUE)
-writeRaster(distAllModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_dist_AllPoints_no0_PF.asc",format="ascii",overwrite=TRUE)
-
-writeRaster(NodistAllModel2_no0,"HSI_James_NoDist_AllPoints_no0_PF.asc",format="ascii",overwrite=TRUE)
-writeRaster(NodistAllModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_NoDist_AllPoints_no0_PF.asc",format="ascii",overwrite=TRUE)
-
-writeRaster(NodistForModel2_no0,"HSI_James_NoDist_ForOnly_no0_PF.asc",format="ascii",overwrite=TRUE)
-writeRaster(NodistForModel2_no0,"C:/Users/mec21/Documents/SMRU/IBM/Model/Input/HSI_James_NoDist_ForOnly_no0_PF.asc",format="ascii",overwrite=TRUE)
